@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator snapshot 1`] = `
+<div
+  className="calculatorWrapper"
+>
+  <p>
+    <label>
+      Starting Amount: 
+      <input
+        id="principalAmount"
+        name="principalAmount"
+        onChange={[Function]}
+        step="100"
+        type="text"
+        value={0}
+      />
+    </label>
+  </p>
+  <label>
+    Interest Rate: 
+    <input
+      id="interestRate"
+      max="15"
+      min="0"
+      name="interestRate"
+      onChange={[Function]}
+      step="0.01"
+      type="range"
+      value={0}
+    />
+    0
+    % p.a.
+  </label>
+  <p>
+    <label>
+      Year: 
+      <input
+        id="termYear"
+        max="5"
+        min="0"
+        name="termYear"
+        onChange={[Function]}
+        type="range"
+        value={0}
+      />
+       
+      0
+    </label>
+  </p>
+  <label>
+    Month: 
+    <input
+      id="termYear"
+      max="12"
+      min="0"
+      name="termMomth"
+      onChange={[Function]}
+      type="range"
+      value={0}
+    />
+     
+    0
+  </label>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Calculate at maturity interest
+    </button>
+  </div>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Calculate monthly interest
+    </button>
+  </div>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Calculate quarterly interest
+    </button>
+  </div>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Calculate yearly interest
+    </button>
+  </div>
+  <p>
+    Total balance: 
+    0
+  </p>
+  Total interest earned: 
+  0
+</div>
+`;
