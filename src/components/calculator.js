@@ -66,37 +66,44 @@ function Calculator () {
 
   return (
         <div className="calculatorWrapper">
-            <label>
-                Starting Amount: <input type="text" id="principalAmount" name="principalAmount" step="100" value={principalAmount} onChange={(e) => setPrincipalAmount(sanitiseInput(e.target.value, 0, MAX_PRINCIPAL_AMOUNT))}/>
-            </label>
-            <label>
-              Interest Rate: <input type="range" id="interestRate" name="interestRate" min="0" max="15" step="0.01" value={interestRate} onChange={(e) => setInterestRate(sanitiseInput(e.target.value, 0, MAX_INTEREST_RATE))}/>{interestRate}% p.a.
-            </label>
-            <p>
-              <label>
-                Year: <input type="range" id="termYear" name="termYear" min="0" max="5" value={termYear} onChange={(e) => setTermYear(sanitiseInput(e.target.value, 0, MAX_YEAR))}/> {termYear}
-              </label>
-            </p>
-            <label>
-              Month: <input type="range" id="termYear" name="termMomth" min="0" max="12" value={termMonth} onChange={(e) => setTermMonth(sanitiseInput(e.target.value, 0, 12))}/> {termMonth}
-            </label>
-
-            <div>
-              <button onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'atMaturity')}>Calculate at maturity interest</button>
-            </div>
-            <div>
-              <button onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'monthly')}>Calculate monthly interest</button>
-            </div>
-            <div>
-              <button onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'quarterly')}>Calculate quarterly interest</button>
-            </div>
-            <div>
-              <button onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'yearly')}>Calculate yearly interest</button>
-            </div>
-            <p>
+            <div className="calculatorRow">
               Total balance: {finalBalance}
-            </p>
+            </div>
+            <div className="calculatorRow">
               Total interest earned: {totalInterestEarned}
+            </div>
+            <div className="calculatorRow">
+              <label>
+                  Starting Amount: <input type="text" id="principalAmount" name="principalAmount" step="100" value={principalAmount} onChange={(e) => setPrincipalAmount(sanitiseInput(e.target.value, 0, MAX_PRINCIPAL_AMOUNT))}/>
+              </label>
+            </div>
+            <div className="calculatorRow">
+              <label>
+                Interest Rate: <input type="range" id="interestRate" name="interestRate" min="0" max="15" step="0.01" value={interestRate} onChange={(e) => setInterestRate(sanitiseInput(e.target.value, 0, MAX_INTEREST_RATE))}/>{interestRate}% p.a.
+              </label>
+            </div>
+            <div className="calculatorRow">
+              <label>
+                  Year: <input type="range" id="termYear" name="termYear" min="0" max="5" value={termYear} onChange={(e) => setTermYear(sanitiseInput(e.target.value, 0, MAX_YEAR))}/> {termYear}
+                </label>
+            </div>
+            <div className="calculatorRow">
+              <label>
+                Month: <input type="range" id="termYear" name="termMomth" min="0" max="12" value={termMonth} onChange={(e) => setTermMonth(sanitiseInput(e.target.value, 0, 12))}/> {termMonth}
+              </label>
+            </div>
+            <div className="calculatorRow">
+              <button className="styled-button" onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'atMaturity')}>Calculate at maturity interest</button>
+            </div>
+            <div className="calculatorRow">
+              <button className="styled-button" onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'monthly')}>Calculate monthly interest</button>
+            </div>
+            <div className="calculatorRow">
+              <button className="styled-button" onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'quarterly')}>Calculate quarterly interest</button>
+            </div>
+            <div className="calculatorRow">
+              <button className="styled-button" onClick={() => calculator(principalAmount, interestRate, termYear, termMonth, 'yearly')}>Calculate yearly interest</button>
+            </div>
         </div>
   )
 }
