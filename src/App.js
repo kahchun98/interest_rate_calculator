@@ -1,8 +1,8 @@
-import logo from './images/calculator-money-icon.svg';
-import './App.css';
-import Calculator from './components/calculator';
+import logo from './images/calculator-money-icon.svg'
+import './App.css'
+import Calculator from './components/calculator'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <header className="App-header">
@@ -12,7 +12,7 @@ function App() {
         <Calculator/>
       </body>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
